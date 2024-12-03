@@ -1,0 +1,31 @@
+[package]
+name = "reader_rust"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+regex = "1"
+chrono = "0.4"
+rfd = "0.15.1"
+clap = { version = "4.5.21", features = ["derive"] }
+zip = "2.2.1"
+tar = "0.4.43"
+unrar = "0.5.6"
+image = "0.25.5"
+indicatif = "0.17.9"
+tokio = "1.41.1"
+
+# This section is for multiple binaries
+[[bin]]
+name = "archive_cleaner"
+path = "bin/archive_cleaner.rs"
+
+
+[[bin]]
+name = "file_handler"
+path = "bin/file_handler.rs"
+
+# If you have a main binary as well (optional)
+[[bin]]
+name = "main"
+path = "src/main.rs"
